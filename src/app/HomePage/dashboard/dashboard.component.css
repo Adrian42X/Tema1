@@ -1,0 +1,31 @@
+.background-image {
+	height: 50vh; /* Set the height to half of the viewport height */
+	background-image: url("C:/Users/adria/Desktop/sem II/Angular CSTac/img.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.service-list, .city-list {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  }
+
+.city-card {
+	width: 300px;
+	height: 350px;
+	margin: 20px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.city-card h2 {
+	margin-top: 0;
+}
+
+.city-card p {
+	font-size: 16px;
+	line-height: 1.5;
+}

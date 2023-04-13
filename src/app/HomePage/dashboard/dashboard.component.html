@@ -1,0 +1,20 @@
+<div class="dashboard-container">
+    <div class="background-image"></div>
+    <div class="search">
+        <h2>Search & book all our destination</h2>
+        <input type="text" placeholder="Search..">
+        <h1>Our Services</h1>
+        <br>
+        
+    </div>
+    <div class="service-list">
+        <ng-container *ngFor="let service of services">
+            <app-service-card [service]="service"></app-service-card>
+        </ng-container>
+    </div>
+	<div class="city-list">
+		<ng-container *ngFor="let dest of destinations">
+            <app-city-card [destination]="dest"></app-city-card>
+        </ng-container>
+	</div>
+</div>

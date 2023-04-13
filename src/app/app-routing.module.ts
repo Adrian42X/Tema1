@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CitypageComponent } from './citypage/citypage.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'',redirectTo:"home",pathMatch:'full'},
+  {path:"city",component:CitypageComponent},
+  {
+    path:"home",
+    loadChildren: () =>
+      import('./HomePage/home.module').then((m) => m.HomeModule),
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
