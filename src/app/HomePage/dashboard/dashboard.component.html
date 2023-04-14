@@ -1,20 +1,33 @@
+<head>
+    <h1>Home Page</h1>
+</head>
+<body>
 <div class="dashboard-container">
-    <div class="background-image"></div>
+    <div class="background-image">
+        <h3>Discover the colorful world</h3>
+        <h1>{{currentDestination.title}}</h1>
+        <br>
+        <p>{{currentDestination.description}}</p>
+        <br>
+        <button (click)="navigateToCity()">Discover Now</button>
+    </div>
     <div class="search">
         <h2>Search & book all our destination</h2>
-        <input type="text" placeholder="Search..">
+        <input type="text" placeholder="Search.." [(ngModel)]="search">
         <h1>Our Services</h1>
         <br>
-        
+        <div class="service-list">
+            <ng-container *ngFor="let service of services">
+                <app-service-card [service]="service"></app-service-card>
+            </ng-container>
+        </div>
     </div>
-    <div class="service-list">
-        <ng-container *ngFor="let service of services">
-            <app-service-card [service]="service"></app-service-card>
-        </ng-container>
-    </div>
+    <br>
+    <h2>Most Popular</h2>
 	<div class="city-list">
 		<ng-container *ngFor="let dest of destinations">
-            <app-city-card [destination]="dest"></app-city-card>
+            <app-city-card [destination]="dest" (cityEmitter)="setCity($event)"></app-city-card>
         </ng-container>
 	</div>
 </div>
+</body>

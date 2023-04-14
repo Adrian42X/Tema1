@@ -1,1 +1,19 @@
-<p>citypage works!</p>
+<html>
+  <head>
+    <title>City Page</title>
+  </head>  
+<body>
+    <header>
+      <div class="container">
+        <h1>City Page</h1>
+      </div>
+    </header>
+    
+    <div class="destination">
+      <img src="{{destination.image}}">
+      <h3>{{destination.title}}</h3>
+      <p>{{destination.description}}</p>
+      <button class="btn-back" (click)="goToHome()">Back to HomePage</button>
+    </div>
+  </body>
+</html>

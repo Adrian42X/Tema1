@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Destination } from 'src/app/models/destination';
 
 @Component({
@@ -8,4 +8,9 @@ import { Destination } from 'src/app/models/destination';
 })
 export class CityCardComponent {
   @Input() destination!: Destination;
+  @Output() cityEmitter: EventEmitter<Destination> = new EventEmitter<Destination>();
+
+  emitDestination(){
+    this.cityEmitter.emit(this.destination);
+  }
 }

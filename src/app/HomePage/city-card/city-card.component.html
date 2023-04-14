@@ -1,6 +1,6 @@
-<div>
+<div class="city-card">
     <img [src]="destination.image">
     <h3>{{destination.title}}</h3>
     <p>{{destination.description}}</p>
-    <button>Visit</button>
+    <button (click)="emitDestination()">Visit</button>
 </div>
