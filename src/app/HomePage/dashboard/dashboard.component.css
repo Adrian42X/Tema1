@@ -1,9 +1,9 @@
 .background-image {
 	height: 60vh;
-	background-image: url("C:/Users/adria/Desktop/sem II/Angular CSTac/img.jpg");
+	background-image: url("src\assets\primary.jpg");
 	background-size: cover;
 	background-position: center;
-	color: rgb(255, 255, 255);
+	color: rgb(255, 193, 58);
 	text-align: center;
 	display: flex;
   	flex-direction: column;
